@@ -1,7 +1,7 @@
 # Command Line Power Lab
 
 ## Table of Contents
-
+//wtf 
 - [Overview](#overview)
 - [Learning Outcomes](#learning-outcomes)
 - [Setup & Getting Started](#setup--getting-started)
