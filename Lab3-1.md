@@ -42,9 +42,12 @@ By the end of this lab you should be able to:
 
 Run this quick check in your terminal:
 
+
+
 ```bash
 echo "Hello, $(whoami)! Your lab starts now." && python3 --version && curl --version >/dev/null && wget --version >/dev/null
 ```
+
 
 If any command fails, install the missing package using your distro's package manager (e.g. `apt`, `dnf`, `pacman`, `brew`). If you're using our usual Codespaces then everything should be working fine.
 
@@ -269,7 +272,7 @@ wget -i urls.txt
 ```
 
 ### Exercises 
-1. Use `curl` to fetch your public IP: `curl -s https://api.ipify.org?format=json`
+1. Use `curl` to fetch your public IP: `curl -s https://api.ipify.org?format=json` //172.166.156.162 
 2. Use `curl -I` to get headers from three different sites.
 3. Create `downloads/` and use `wget -P downloads/ <url>` to save a file.
 
