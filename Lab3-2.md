@@ -204,7 +204,7 @@ You can mix Bash loops and Python one-liners for automation.
 for word in admin test guest; do
   python3 -c "import hashlib; print('$word ->', hashlib.md5(b'$word').hexdigest())"
 done
-```
+```: do
 
 ### Exercise:
 Adapt the example above to compute SHA256 hashes for a small password list.
@@ -214,15 +214,31 @@ Adapt the example above to compute SHA256 hashes for a small password list.
 Try these mini-projects using only the interactive Python shell or python3 -c:
 
 Convert the hex string 666c61675f69735f68657265 to ASCII.
+ python3 -c "print(int('666c61675f69735f68657265',16))"
 
-Compute the SHA1 hash of "CTF2025".
-
+31698494966734208068233818725
+---------------------------------------------------------------------------------------
+for word in password 123456 admin secret  qwerty; do
+> python3 -c "import hashlib; print('$word ->', hashlib.sha256(b'$word').hexdigest())"
+> done
+----------------------------------------------------------------------------------------
+Compute the SHA1 hash of "CTF2025". ANSWER: '7ea46ae9737df4424da560f682a39f48a3b143ae'
+-------------------------------------------------------------------------------------------
 Generate a random 12-character password containing at least one symbol.
-
+python3 -c "import secrets, string; chars = string.ascii_letters + string.digits + '!@#$%&*'; password = ''.join(secrets.choice(chars) for _ in range(12)); print(password)"
+-----------------------------------------------------------------------------------
 Find the IP of picoctf.com
-
+python3 -q
+>>> import socket
+>>> socket.gethostbyname('picoctf.com')
+'18.245.218.75'
+------------------------------------------------------------------------------
 Create a one-liner that prints the current date and time in ISO format.
 
+python3 -c "from datetime import datetime; print(date
+time.now().isoformat())"
+
+--------------------------------------------------------------------------------
 ## TL;DR
 
 | Task          | Interactive Example                | One-liner Example                                                       |
